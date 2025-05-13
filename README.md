@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📝 BeyondZenith – Personal Blog
 
-## Getting Started
+A modern developer blog built with **Next.js**, designed to share thoughts, tutorials, and project updates in a clean, responsive layout.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌐 [Visit Blog](https://beyondzenith.vercel.app)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠️ Tech Stack
 
-## Learn More
+- ⚛️ **Next.js** – React framework for SSR and static sites
+- ☁️ **Vercel** – Hosting and continuous deployment
+- 🔗 **Git & GitHub** – Version control and collaboration
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 📱 **Responsive Design** – Mobile-first layout that works on all screen sizes
+- 🚀 **Blazing Fast** – Built with performance and SEO in mind
+- 🌙 **Dark Mode** – Optional dark/light theme toggle
+- 🗂️ **Categories & Tags** – Easily filter and explore content
+- 🔗 **Social Links** – Link out to GitHub, LinkedIn, and more
+- 🧼 **Clean Codebase** – Easy to customize and extend
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📸 Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> *(Screenshots coming up...)*  
+
+---
+
+## 🧑‍💻 Author
+
+**Zenith Popat**
+
+- 🔗 GitHub: [@ZenithPopat](https://github.com/ZenithPopat)
+- 💼 LinkedIn: [Zenith Popat](https://linkedin.com/in/zenithpopat)
+- 🌐 Portfolio: [zenithpopat.vercel.app](https://zenithpopat.vercel.app)
+
+---
+
+## ⭐️ Support
+
+If you find this project useful, feel free to **star the repo**, **fork it**, or **share it** with others!
