@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./menuPosts.module.css";
 
 const getData = async () => {
-  const res = await fetch(`http://localhost:3000/api/popular-posts`, {
+  const res = await fetch(`https://beyondzenith.vercel.app/api/popular-posts`, {
     cache: "no-store",
   });
   const data = await res.json();

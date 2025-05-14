@@ -8,16 +8,18 @@ import { FaComments } from "react-icons/fa6";
 import Likes from "@/components/likes/likes";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+  const res = await fetch(`https://beyondzenith.vercel.app/api/posts/${slug}`, {
     cache: "no-store", // Disable caching for this request. Next.js caches the response by default.
   });
 
   const commentCount = await fetch(
-    `http://localhost:3000/api/comments?postSlug=${slug}`
+    `https://beyondzenith.vercel.app/api/comments?postSlug=${slug}`
   );
   const data = await commentCount.json();
 
-  const like = await fetch(`http://localhost:3000/api/likes?postSlug=${slug}`);
+  const like = await fetch(
+    `https://beyondzenith.vercel.app/api/likes?postSlug=${slug}`
+  );
   const likeData = await like.json();
   if (!res.ok) {
     throw new Error("Failed to fetch categories!");

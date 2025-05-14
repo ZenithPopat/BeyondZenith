@@ -30,7 +30,10 @@ const Likes = ({ postSlug }) => {
     mutate,
     isLoading,
     error,
-  } = useSWR(`http://localhost:3000/api/likes?postSlug=${postSlug}`, fetcher);
+  } = useSWR(
+    `https://beyondzenith.vercel.app/api/likes?postSlug=${postSlug}`,
+    fetcher
+  );
 
   const [isLiking, setIsLiking] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
