@@ -1,4 +1,10 @@
-.container {
+.description a {
+  text-decoration: underline;
+  color: #174ea6; /* Optional: Medium-style link color */
+}
+
+.description a:hover {
+  color: #133e84; /* Optional hover effect */
 }
 
 .infoContainer {

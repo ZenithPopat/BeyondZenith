@@ -3,10 +3,11 @@
 import Image from "next/image";
 import styles from "./writePage.module.css";
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-// const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-import ReactQuill from "react-quill-new";
-import "react-quill/dist/quill.bubble.css"; // Import styles
+// import dynamic from "next/dynamic";
+// // const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+// import ReactQuill from "react-quill-new";
+// import "react-quill/dist/quill.bubble.css"; // Import styles
+import TextEditor from "@/components/textEditor/TextEditor";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import {
@@ -42,6 +43,7 @@ const WritePage = () => {
   const [catSlug, setCatSlug] = useState("");
   const [value, setValue] = useState("");
   const [categories, setCategories] = useState([]);
+  const [content, setContent] = useState("");
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -101,13 +103,14 @@ const WritePage = () => {
       .replace(/[\s_-]/g, "-")
       .replace(/^-+|-+$/g, "-");
   const handleSubmit = async () => {
+    console.log(title, content, media, catSlug);
     toast.loading("Publishing Post...");
     try {
       const res = await fetch("/api/posts", {
         method: "POST",
         body: JSON.stringify({
           title,
-          desc: value,
+          desc: content,
           img: media, // media,
           slug: slugify(title),
           catSlug: catSlug || "travel",
@@ -126,6 +129,7 @@ const WritePage = () => {
       }
     } catch {
       toast.error("Failed to publish blog.");
+      toast.dismiss();
     }
   };
 
@@ -176,23 +180,9 @@ const WritePage = () => {
                 <Image src="/image.png" alt="" width={16} height={16} />
               </label>
             </button>
-            <button className={styles.addButton}>
-              <Image src="/external.png" alt="" width={16} height={16} />
-            </button>
-            <button className={styles.addButton}>
-              <Image src="/video.png" alt="" width={16} height={16} />
-            </button>
           </div>
         )}
-        <ReactQuill
-          className={styles.textArea}
-          theme="bubble"
-          value={value}
-          onChange={setValue}
-          placeholder="Tell your story..."
-          //   modules={modules}
-          //   formats={formats}
-        />
+        <TextEditor onChange={(html) => setContent(html)} />
       </div>
       <button className={styles.publish} onClick={handleSubmit}>
         Publish
