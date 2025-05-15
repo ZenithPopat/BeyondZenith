@@ -2,9 +2,10 @@
   position: relative;
   width: 100%;
   margin-top: 75px;
-  min-height: 300px;
   background-color: transparent;
   color: var(--textColor);
+  display: flex;
+  flex-direction: column;
 }
 
 .editorContent :global(.ProseMirror) {
@@ -12,7 +13,6 @@
   outline: none;
   background-color: transparent;
   width: 100%;
-  min-height: 400px;
   line-height: 1.6;
   font-size: 25px;
   color: var(--textColor);
@@ -20,6 +20,11 @@
   margin: 0;
   box-shadow: none;
   resize: none;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 400px;
+  height: auto;
 }
 
 /* Bubble Menu styling */

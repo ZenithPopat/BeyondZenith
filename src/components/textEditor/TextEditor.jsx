@@ -32,6 +32,11 @@ export default function TextEditor({ onChange }) {
       onChange?.(html);
     },
     immediatelyRender: false,
+    editorProps: {
+      attributes: {
+        style: "height: auto; overflow: hidden;",
+      },
+    },
   });
 
   const openLinkInput = () => {
