@@ -99,6 +99,20 @@ export default function TextEditor({ onChange }) {
                 H1
               </button>
               <button
+                onClick={() =>
+                  editor.chain().focus().toggleHeading({ level: 2 }).run()
+                }
+              >
+                H2
+              </button>
+              <button
+                onClick={() =>
+                  editor.chain().focus().toggleHeading({ level: 3 }).run()
+                }
+              >
+                H3
+              </button>
+              <button
                 onClick={() => editor.chain().focus().toggleBlockquote().run()}
                 className={editor.isActive("blockquote") ? styles.active : ""}
               >
